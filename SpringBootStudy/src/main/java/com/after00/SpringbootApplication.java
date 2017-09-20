@@ -2,17 +2,9 @@ package com.after00;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class SpringbootApplication extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer {
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(SpringbootApplication.class);
-    }
-
+public class SpringbootApplication {
     /**
      * 启动方式1：直接main；
      * 启动方式2：cd到项目路径；执行mvn spring-boot:run
@@ -23,12 +15,4 @@ public class SpringbootApplication extends SpringBootServletInitializer implemen
         SpringApplication.run(SpringbootApplication.class, args);
     }
 
-    /**
-     * 重写customize自定义端口号（默认为8080）
-     * @param container
-     */
-    @Override
-    public void customize(ConfigurableEmbeddedServletContainer container) {
-        container.setPort(8081);
-    }
 }
