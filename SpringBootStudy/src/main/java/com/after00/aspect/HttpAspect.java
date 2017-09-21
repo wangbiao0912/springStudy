@@ -1,31 +1,32 @@
 package com.after00.aspect;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.mvc.condition.RequestConditionHolder;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Objects;
 
 /**
  * 执行顺序：doBefore->method->doAfter->doAfterReturning
  * <p>
- * Created by xiaofan on 2017/4/4.
+ *
+ * aop做处理
  */
-@Aspect
-@Component
+/*@Aspect
+@Component*/
 public class HttpAspect {
     private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
     /**
      * 通用路径，避免代码重复
      */
-    @Pointcut("execution(public * com.zxiaofan.controller.FruitController.*(..))")
+    @Pointcut("execution(public * com.after00.controller.HelloController.*(..))")
     public void log() {
     }
 

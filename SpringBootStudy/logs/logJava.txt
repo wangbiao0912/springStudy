@@ -977,3 +977,941 @@ Caused by: java.lang.IllegalArgumentException: warning no match for this type na
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:134) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
 	... 8 more
+[2017-09-21 11:01:48.573][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:01:49.014][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 16748 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:01:49.017][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:01:49.051][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4007f65e: startup date [Thu Sep 21 11:01:49 CST 2017]; root of context hierarchy
+[2017-09-21 11:01:49.336][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:01:50.519][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zxiaofan.controller.FruitController [Xlint:invalidAbsoluteTypeName]
+[2017-09-21 11:01:50.526][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:01:50.528][ERROR][org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:832)]-Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zxiaofan.controller.FruitController [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:137) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zxiaofan.controller.FruitController [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:497) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:196) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:134) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	... 8 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zxiaofan.controller.FruitController [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:390) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1249) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1098) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:94) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:107) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1062) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1035) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:491) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:196) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:134) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	... 8 more
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.zxiaofan.controller.FruitController [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:301) ~[aspectjweaver-1.8.10.jar:1.8.10]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:226) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:197) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:176) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:224) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:283) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:315) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:124) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:93) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:74) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:351) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:303) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:438) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:390) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1249) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1098) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:94) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:107) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253) ~[spring-aop-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1062) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1035) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:491) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:196) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:134) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	... 8 more
+[2017-09-21 11:07:06.909][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:07:07.613][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 12744 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:07:07.637][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:07:07.672][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4007f65e: startup date [Thu Sep 21 11:07:07 CST 2017]; root of context hierarchy
+[2017-09-21 11:07:08.434][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:07:10.206][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:07:10.228][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:07:10.230][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:07:10.466][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:07:10.466][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2796 ms
+[2017-09-21 11:07:10.636][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:07:10.640][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:07:10.640][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:07:10.640][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:07:10.640][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:07:10.748][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+[2017-09-21 11:07:10.749][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:07:10.784][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:07:10.786][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42)]-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+[2017-09-21 11:07:40.331][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:07:40.849][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 8656 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:07:40.851][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:07:40.911][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f94c4db: startup date [Thu Sep 21 11:07:40 CST 2017]; root of context hierarchy
+[2017-09-21 11:07:41.371][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:07:43.581][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:07:43.613][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:07:43.614][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:07:43.789][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:07:43.789][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2880 ms
+[2017-09-21 11:07:43.960][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:07:43.965][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:07:43.965][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:07:43.965][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:07:43.965][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:07:44.017][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+[2017-09-21 11:07:44.020][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:07:44.040][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:07:44.042][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42)]-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+[2017-09-21 11:09:24.016][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:09:24.592][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 17544 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:09:24.595][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:09:24.644][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3954d008: startup date [Thu Sep 21 11:09:24 CST 2017]; root of context hierarchy
+[2017-09-21 11:09:24.922][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:09:26.833][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:09:26.853][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:09:26.855][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:09:27.020][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:09:27.020][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2378 ms
+[2017-09-21 11:09:27.174][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:09:27.177][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:09:27.178][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:09:27.179][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:09:27.180][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:09:27.222][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+[2017-09-21 11:09:27.224][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:09:27.250][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:09:27.252][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42)]-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+[2017-09-21 11:11:58.184][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:11:58.575][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 14576 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:11:58.577][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:11:58.621][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4007f65e: startup date [Thu Sep 21 11:11:58 CST 2017]; root of context hierarchy
+[2017-09-21 11:11:59.006][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:12:00.742][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:12:00.752][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:12:00.755][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:12:00.951][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:12:00.952][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2333 ms
+[2017-09-21 11:12:01.113][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:12:01.153][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:12:01.154][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:12:01.154][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:12:01.154][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:12:01.190][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+[2017-09-21 11:12:01.192][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:12:01.244][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:12:01.246][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42)]-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+[2017-09-21 11:20:12.448][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:20:13.235][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 10108 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:20:13.243][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:20:13.345][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4007f65e: startup date [Thu Sep 21 11:20:13 CST 2017]; root of context hierarchy
+[2017-09-21 11:20:13.562][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:20:15.528][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:20:15.537][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:20:15.538][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:20:15.731][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:20:15.732][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2389 ms
+[2017-09-21 11:20:15.907][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:20:15.911][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:20:15.911][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:20:15.911][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:20:15.911][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:20:15.956][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+[2017-09-21 11:20:16.420][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:20:16.442][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:20:16.444][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42)]-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+[2017-09-21 11:50:55.258][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:50:55.954][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 7252 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:50:55.957][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:50:56.076][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4007f65e: startup date [Thu Sep 21 11:50:56 CST 2017]; root of context hierarchy
+[2017-09-21 11:50:56.755][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:50:58.454][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:50:58.463][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:50:58.464][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:50:58.624][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:50:58.624][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2550 ms
+[2017-09-21 11:50:58.859][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:50:58.863][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:50:58.863][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:50:58.863][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:50:58.864][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:50:58.949][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+[2017-09-21 11:50:58.951][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:50:58.967][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:50:58.969][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42)]-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+[2017-09-21 11:51:35.156][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:51:35.633][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 9136 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:51:35.635][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:51:35.684][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4007f65e: startup date [Thu Sep 21 11:51:35 CST 2017]; root of context hierarchy
+[2017-09-21 11:51:36.025][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:51:37.576][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:51:37.584][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:51:37.585][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:51:37.706][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:51:37.707][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2024 ms
+[2017-09-21 11:51:37.855][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:51:37.858][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:51:37.859][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:51:37.859][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:51:37.859][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:51:37.918][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+[2017-09-21 11:51:37.920][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:51:37.936][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:51:37.939][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42)]-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+[2017-09-21 11:51:53.682][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:51:54.471][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 17792 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:51:54.473][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:51:54.526][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4007f65e: startup date [Thu Sep 21 11:51:54 CST 2017]; root of context hierarchy
+[2017-09-21 11:51:55.084][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:51:56.498][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:51:56.509][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:51:56.510][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:51:56.674][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:51:56.674][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2150 ms
+[2017-09-21 11:51:56.896][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:51:56.901][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:51:56.901][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:51:56.901][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:51:56.902][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:51:56.964][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+[2017-09-21 11:51:56.966][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:51:57.016][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:51:57.017][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42)]-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+[2017-09-21 11:53:39.632][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:53:40.051][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 1540 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:53:40.055][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:53:40.091][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26abb146: startup date [Thu Sep 21 11:53:40 CST 2017]; root of context hierarchy
+[2017-09-21 11:53:40.364][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:53:41.981][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:53:41.999][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:53:42.000][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:53:42.153][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:53:42.154][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2065 ms
+[2017-09-21 11:53:42.347][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:53:42.350][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:53:42.350][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:53:42.352][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:53:42.352][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:53:42.805][INFO][com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:95)]-testdb - Starting...
+[2017-09-21 11:53:43.036][INFO][com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:107)]-testdb - Start completed.
+[2017-09-21 11:53:43.089][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:354)]-Building JPA container EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:53:43.129][INFO][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31)]-HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2017-09-21 11:53:43.217][INFO][org.hibernate.Version.logVersion(Version.java:45)]-HHH000412: Hibernate Core {5.2.10.Final}
+[2017-09-21 11:53:43.218][INFO][org.hibernate.cfg.Environment.<clinit>(Environment.java:213)]-HHH000206: hibernate.properties not found
+[2017-09-21 11:53:43.267][INFO][org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)]-HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-09-21 11:53:43.394][INFO][org.hibernate.dialect.Dialect.<init>(Dialect.java:157)]-HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2017-09-21 11:53:43.988][INFO][org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:389)]-Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:53:44.010][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'startBegin': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'fruits.apple' in value "${fruits.apple}"
+[2017-09-21 11:53:44.010][INFO][org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565)]-Closing JPA EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:53:44.011][INFO][com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:347)]-testdb - Shutdown initiated...
+[2017-09-21 11:53:44.043][INFO][com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:349)]-testdb - Shutdown completed.
+[2017-09-21 11:53:44.044][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:53:44.055][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:53:44.057][ERROR][org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:832)]-Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'startBegin': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'fruits.apple' in value "${fruits.apple}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:403) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1340) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:756) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'fruits.apple' in value "${fruits.apple}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172) ~[spring-core-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237) ~[spring-core-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211) ~[spring-core-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:834) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1081) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1060) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:608) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:397) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	... 17 more
+[2017-09-21 11:55:03.436][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:55:03.898][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 6976 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:55:03.900][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:55:03.950][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38467116: startup date [Thu Sep 21 11:55:03 CST 2017]; root of context hierarchy
+[2017-09-21 11:55:04.280][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:55:05.641][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:55:05.650][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:55:05.651][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:55:05.828][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:55:05.828][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 1881 ms
+[2017-09-21 11:55:06.108][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:55:06.113][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:55:06.113][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:55:06.113][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:55:06.113][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:55:06.498][INFO][com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:95)]-testdb - Starting...
+[2017-09-21 11:55:06.701][INFO][com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:107)]-testdb - Start completed.
+[2017-09-21 11:55:06.747][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:354)]-Building JPA container EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:55:06.761][INFO][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31)]-HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2017-09-21 11:55:06.856][INFO][org.hibernate.Version.logVersion(Version.java:45)]-HHH000412: Hibernate Core {5.2.10.Final}
+[2017-09-21 11:55:06.857][INFO][org.hibernate.cfg.Environment.<clinit>(Environment.java:213)]-HHH000206: hibernate.properties not found
+[2017-09-21 11:55:06.889][INFO][org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)]-HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-09-21 11:55:06.994][INFO][org.hibernate.dialect.Dialect.<init>(Dialect.java:157)]-HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2017-09-21 11:55:07.498][WARN][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException(ExceptionHandlerLoggedImpl.java:27)]-GenerationTarget encountered exception accepting command : Error executing DDL via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:525) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:470) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:273) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:203) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:110) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:309) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:452) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:889) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:358) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:384) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:858) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'fruit' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_144]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:845) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:745) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-2.7.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-2.7.1.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	... 33 more
+[2017-09-21 11:55:07.506][WARN][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException(ExceptionHandlerLoggedImpl.java:27)]-GenerationTarget encountered exception accepting command : Error executing DDL via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:525) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:470) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:273) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:203) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:110) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:309) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:452) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:889) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:358) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:384) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:858) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'hibernate_sequence' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_144]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:845) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:745) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-2.7.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-2.7.1.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	... 33 more
+[2017-09-21 11:55:07.515][INFO][org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:389)]-Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:55:07.535][WARN][org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557)]-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'startBegin': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'fruits.apple' in value "${fruits.apple}"
+[2017-09-21 11:55:07.535][INFO][org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565)]-Closing JPA EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:55:07.536][INFO][com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:347)]-testdb - Shutdown initiated...
+[2017-09-21 11:55:07.543][INFO][com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:349)]-testdb - Shutdown completed.
+[2017-09-21 11:55:07.545][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Stopping service [Tomcat]
+[2017-09-21 11:55:07.554][INFO][org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101)]-
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2017-09-21 11:55:07.556][ERROR][org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:832)]-Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'startBegin': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'fruits.apple' in value "${fruits.apple}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:403) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1340) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:756) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) ~[spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'fruits.apple' in value "${fruits.apple}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172) ~[spring-core-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237) ~[spring-core-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211) ~[spring-core-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:834) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1081) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1060) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:608) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:397) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	... 17 more
+[2017-09-21 11:56:07.134][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:56:07.950][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 3240 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:56:07.953][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:56:08.094][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38467116: startup date [Thu Sep 21 11:56:08 CST 2017]; root of context hierarchy
+[2017-09-21 11:56:08.860][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:56:10.785][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:56:10.801][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:56:10.802][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:56:10.905][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:56:10.906][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2814 ms
+[2017-09-21 11:56:11.092][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:56:11.096][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:56:11.096][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:56:11.097][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:56:11.097][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:56:11.430][INFO][com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:95)]-testdb - Starting...
+[2017-09-21 11:56:11.726][INFO][com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:107)]-testdb - Start completed.
+[2017-09-21 11:56:11.763][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:354)]-Building JPA container EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:56:11.778][INFO][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31)]-HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2017-09-21 11:56:11.852][INFO][org.hibernate.Version.logVersion(Version.java:45)]-HHH000412: Hibernate Core {5.2.10.Final}
+[2017-09-21 11:56:11.853][INFO][org.hibernate.cfg.Environment.<clinit>(Environment.java:213)]-HHH000206: hibernate.properties not found
+[2017-09-21 11:56:11.904][INFO][org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)]-HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-09-21 11:56:12.037][INFO][org.hibernate.dialect.Dialect.<init>(Dialect.java:157)]-HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2017-09-21 11:56:12.530][WARN][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException(ExceptionHandlerLoggedImpl.java:27)]-GenerationTarget encountered exception accepting command : Error executing DDL via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:525) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:470) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:273) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:203) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:110) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:309) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:452) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:889) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:358) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:384) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:858) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'fruit' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_144]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:845) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:745) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-2.7.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-2.7.1.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	... 33 more
+[2017-09-21 11:56:12.535][WARN][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException(ExceptionHandlerLoggedImpl.java:27)]-GenerationTarget encountered exception accepting command : Error executing DDL via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:525) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:470) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:273) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:203) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:110) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:309) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:452) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:889) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:358) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:384) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:858) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'hibernate_sequence' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_144]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:845) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:745) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-2.7.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-2.7.1.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	... 33 more
+[2017-09-21 11:56:12.540][INFO][org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:389)]-Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:56:13.134][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:566)]-Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38467116: startup date [Thu Sep 21 11:56:08 CST 2017]; root of context hierarchy
+[2017-09-21 11:56:13.260][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/hi/{id}],methods=[GET]}" onto public java.lang.String com.after00.controller.HelloController.hi(java.lang.Integer)
+[2017-09-21 11:56:13.261][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/good],methods=[GET]}" onto public java.lang.String com.after00.controller.HelloController.good(java.lang.Integer)
+[2017-09-21 11:56:13.261][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/hiHtml],methods=[GET]}" onto public java.lang.String com.after00.controller.templateController.hiHtml()
+[2017-09-21 11:56:13.263][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2017-09-21 11:56:13.264][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2017-09-21 11:56:13.331][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:371)]-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2017-09-21 11:56:13.332][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:371)]-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2017-09-21 11:56:13.429][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:371)]-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2017-09-21 11:56:14.155][INFO][org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:434)]-Registering beans for JMX exposure on startup
+[2017-09-21 11:56:14.157][INFO][org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:896)]-Bean with name 'dataSource' has been autodetected for JMX exposure
+[2017-09-21 11:56:14.187][INFO][org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:669)]-Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[2017-09-21 11:56:14.200][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing ProtocolHandler ["http-nio-8082"]
+[2017-09-21 11:56:14.219][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting ProtocolHandler ["http-nio-8082"]
+[2017-09-21 11:56:14.229][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Using a shared selector for servlet write/read
+[2017-09-21 11:56:14.306][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:194)]-Tomcat started on port(s): 8082 (http)
+[2017-09-21 11:56:14.310][INFO][org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)]-Started SpringbootApplication in 6.964 seconds (JVM running for 7.92)
+[2017-09-21 11:56:14.310][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:20)]-dataService starting success
+[2017-09-21 11:56:45.853][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:18)]-dataService is starting...
+[2017-09-21 11:56:46.630][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting SpringbootApplication on DESKTOP-677FA9D with PID 6840 (D:\github\my\springStudy\SpringBootStudy\target\classes started by wangbiao in D:\github\my\springStudy\SpringBootStudy)
+[2017-09-21 11:56:46.633][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:654)]-The following profiles are active: dev
+[2017-09-21 11:56:46.693][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:589)]-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26abb146: startup date [Thu Sep 21 11:56:46 CST 2017]; root of context hierarchy
+[2017-09-21 11:56:47.135][INFO][org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30)]-HV000001: Hibernate Validator 5.4.1.Final
+[2017-09-21 11:56:49.105][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:86)]-Tomcat initialized with port(s): 8082 (http)
+[2017-09-21 11:56:49.113][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting service [Tomcat]
+[2017-09-21 11:56:49.114][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting Servlet Engine: Apache Tomcat/8.5.20
+[2017-09-21 11:56:49.266][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing Spring embedded WebApplicationContext
+[2017-09-21 11:56:49.267][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:267)]-Root WebApplicationContext: initialization completed in 2576 ms
+[2017-09-21 11:56:49.418][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191)]-Mapping servlet: 'dispatcherServlet' to [/]
+[2017-09-21 11:56:49.421][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'characterEncodingFilter' to: [/*]
+[2017-09-21 11:56:49.422][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2017-09-21 11:56:49.422][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2017-09-21 11:56:49.423][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:251)]-Mapping filter: 'requestContextFilter' to: [/*]
+[2017-09-21 11:56:49.698][INFO][com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:95)]-testdb - Starting...
+[2017-09-21 11:56:49.907][INFO][com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:107)]-testdb - Start completed.
+[2017-09-21 11:56:49.943][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:354)]-Building JPA container EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:56:49.959][INFO][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31)]-HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2017-09-21 11:56:50.044][INFO][org.hibernate.Version.logVersion(Version.java:45)]-HHH000412: Hibernate Core {5.2.10.Final}
+[2017-09-21 11:56:50.045][INFO][org.hibernate.cfg.Environment.<clinit>(Environment.java:213)]-HHH000206: hibernate.properties not found
+[2017-09-21 11:56:50.075][INFO][org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)]-HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2017-09-21 11:56:50.165][INFO][org.hibernate.dialect.Dialect.<init>(Dialect.java:157)]-HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2017-09-21 11:56:50.742][WARN][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException(ExceptionHandlerLoggedImpl.java:27)]-GenerationTarget encountered exception accepting command : Error executing DDL via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:525) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:470) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:273) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:203) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:110) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:309) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:452) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:889) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:358) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:384) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:858) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'fruit' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_144]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:845) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:745) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-2.7.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-2.7.1.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	... 33 more
+[2017-09-21 11:56:50.751][WARN][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException(ExceptionHandlerLoggedImpl.java:27)]-GenerationTarget encountered exception accepting command : Error executing DDL via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:525) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:470) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:273) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:203) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:110) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:309) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:452) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:889) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:358) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:384) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:858) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.0.0.RC4.jar:5.0.0.RC4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M4.jar:2.0.0.M4]
+	at com.after00.SpringbootApplication.main(SpringbootApplication.java:19) [classes/:?]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'hibernate_sequence' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_144]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:845) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:745) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-2.7.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-2.7.1.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.2.10.Final.jar:5.2.10.Final]
+	... 33 more
+[2017-09-21 11:56:50.755][INFO][org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:389)]-Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2017-09-21 11:56:51.401][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:566)]-Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26abb146: startup date [Thu Sep 21 11:56:46 CST 2017]; root of context hierarchy
+[2017-09-21 11:56:51.521][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/hi/{id}],methods=[GET]}" onto public java.lang.String com.after00.controller.HelloController.hi(java.lang.Integer)
+[2017-09-21 11:56:51.522][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/good],methods=[GET]}" onto public java.lang.String com.after00.controller.HelloController.good(java.lang.Integer)
+[2017-09-21 11:56:51.522][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/hiHtml],methods=[GET]}" onto public java.lang.String com.after00.controller.templateController.hiHtml()
+[2017-09-21 11:56:51.525][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2017-09-21 11:56:51.526][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:549)]-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2017-09-21 11:56:51.597][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:371)]-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2017-09-21 11:56:51.597][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:371)]-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2017-09-21 11:56:51.655][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:371)]-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2017-09-21 11:56:52.227][INFO][org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:434)]-Registering beans for JMX exposure on startup
+[2017-09-21 11:56:52.229][INFO][org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:896)]-Bean with name 'dataSource' has been autodetected for JMX exposure
+[2017-09-21 11:56:52.234][INFO][org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:669)]-Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[2017-09-21 11:56:52.248][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Initializing ProtocolHandler ["http-nio-8082"]
+[2017-09-21 11:56:52.270][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Starting ProtocolHandler ["http-nio-8082"]
+[2017-09-21 11:56:52.279][INFO][org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179)]-Using a shared selector for servlet write/read
+[2017-09-21 11:56:52.348][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:194)]-Tomcat started on port(s): 8082 (http)
+[2017-09-21 11:56:52.352][INFO][org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)]-Started SpringbootApplication in 6.373 seconds (JVM running for 7.179)
+[2017-09-21 11:56:52.353][INFO][com.after00.SpringbootApplication.main(SpringbootApplication.java:20)]-dataService starting success

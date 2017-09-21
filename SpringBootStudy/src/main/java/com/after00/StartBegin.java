@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 public class StartBegin implements CommandLineRunner {
-	@Value("${fruits.apple}")
+	@Value("${fruit.apple}")
 	private String apple;
 	@Override
 	public void run(String... args) throws Exception {
