@@ -2,10 +2,13 @@ package com.after00;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import lombok.extern.slf4j.Slf4j;
 
+//手动禁止链接数据库@SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
 @SpringBootApplication
+@EnableScheduling //启动定时任务
 @Slf4j
 public class SpringbootApplication {
     /**

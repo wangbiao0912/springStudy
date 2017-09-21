@@ -5,6 +5,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -19,12 +22,16 @@ public class StartBegin implements CommandLineRunner {
 	private String apple;
 	@Override
 	public void run(String... args) throws Exception {
-        System.out.println("1111111111111111");
+        System.out.println("1111111111111111"+apple);
 	}
+
+    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+
     //每10分钟执行一次
-    @Scheduled(fixedRate = 1000 * 60 * 1)
+    @Scheduled(fixedRate = 3000)
     private void doSomething() {
-        log.info(apple+"..");
+      System.out.println(sdf.format(new Date()));
+	  log.info(apple+"..");
     }
 
 }

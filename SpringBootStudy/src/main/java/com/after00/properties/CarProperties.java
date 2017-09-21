@@ -1,7 +1,10 @@
 package com.after00.properties;
 
-/*@Component
-@ConfigurationProperties(prefix = "car") // 注入前缀为car的配置*/
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties(prefix = "car") // 注入前缀为car的配置
 public class CarProperties {
     private String color;
     private Integer size;
