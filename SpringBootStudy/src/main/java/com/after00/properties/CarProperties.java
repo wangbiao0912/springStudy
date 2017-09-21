@@ -1,13 +1,7 @@
 package com.after00.properties;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-/**
- * Created by xiaofan on 2017/3/23.
- */
-@Component
-@ConfigurationProperties(prefix = "car") // 注入前缀为car的配置
+/*@Component
+@ConfigurationProperties(prefix = "car") // 注入前缀为car的配置*/
 public class CarProperties {
     private String color;
     private Integer size;

@@ -3,7 +3,10 @@ package com.after00;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import lombok.extern.slf4j.Slf4j;
+
 @SpringBootApplication
+@Slf4j
 public class SpringbootApplication {
     /**
      * 启动方式1：直接main；
@@ -12,7 +15,8 @@ public class SpringbootApplication {
      * @param args
      */
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootApplication.class, args);
+        log.info("dataService is starting...");
+        SpringApplication.run(SpringbootApplication.class);
+        log.info("dataService starting success");
     }
-
 }
